@@ -5,6 +5,18 @@ public class serwerRPC {
         return x + y;
     }
 
+    public Integer execAsy(int a) {
+        System.out.println("... met asychroniczna wywołana ...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Thread.currentThread().interrupt();
+        }
+        System.out.println("... met asychroniczna zakończona ...");
+        return a;
+    }
+
     public static void main(String[] args) {
         try{
             System.err.println("Startuje serwer XML-RPC...");

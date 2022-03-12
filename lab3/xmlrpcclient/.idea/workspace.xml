@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="097d0ac2-6543-421a-ba45-ed08581e2732" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xmlrpcserwer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../xmlrpcserwer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xmlrpcserwer/src/serwerRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../xmlrpcserwer/src/serwerRPC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../xmlrpcserwer" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />

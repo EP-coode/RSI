@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="191b907d-a964-4d62-b8f4-edbd9923475f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../xmlrpcclient/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xmlrpcclient/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../xmlrpcclient/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xmlrpcclient/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../xmlrpcclient/.idea/sbt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xmlrpcclient/lab3-xmlrpcclient.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/serwerRPC.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xmlrpcclient/src/AC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xmlrpcclient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../xmlrpcclient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xmlrpcclient/src/ClientRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../xmlrpcclient/src/ClientRPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serwerRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/serwerRPC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../liblaries/xmlrpc-1.2-b1/xmlrpc-1.2-b1.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
