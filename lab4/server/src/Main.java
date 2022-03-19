@@ -1,5 +1,6 @@
 import org.apache.xmlrpc.WebServer;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class Main {
@@ -7,23 +8,31 @@ public class Main {
     public Vector<Integer> asyncPrimes(int floor, int celling){
         int count = 0;
         int lastPrime = -1;
-        boolean primeFound = false;
-
-        for(int current = floor; current < celling; current++){
-            primeFound = true;
-
-            for(int i = 2; i < current/2; i++){
-                if(current % i == 0){
-                    primeFound = false;
-                    break;
+        celling+=1;
+        ArrayList<Boolean> l = new ArrayList<>();
+        for(int i=0;i<celling;i++)
+        {
+            l.add(true);
+        }
+        l.set(0,false);
+        l.set(1,false);
+        for(int i=2;i<celling;i++)
+        {
+            if (l.get(i))
+            {
+                if(i>=floor && i<=celling)
+                {
+                    count+=1;
+                    lastPrime=i;
+                }
+                for(int j=i*2;j<celling;j=j+i)
+                {
+                    l.set(j,false);
                 }
             }
 
-            if(primeFound){
-                count++;
-                lastPrime = current;
-            }
         }
+
 
         Vector<Integer> anwser = new Vector<>();
         anwser.add(count);
@@ -61,5 +70,8 @@ public class Main {
         catch (Exception exception){
             System.err.println("Serwer XML-RPC: "+ exception);
         }
+
+
+
     }
 }
