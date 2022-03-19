@@ -2,6 +2,7 @@ import org.apache.xmlrpc.WebServer;
 
 import java.util.ArrayList;
 import java.util.Vector;
+import java.lang.reflect.Method;
 
 public class Main {
     //kom
@@ -41,7 +42,7 @@ public class Main {
         return anwser;
     }
 
-    private Double distance(double lat1, double lon1, double lat2, double lon2){
+    public Double distance(double lat1, double lon1, double lat2, double lon2){
         final double R = 6371d; // radious of earth
         double latDistanceRads = (lat2 - lat1) * Math.PI / 180;
         double lonDistanceRads = (lon2 - lon1) * Math.PI / 180;
@@ -52,26 +53,28 @@ public class Main {
 
         return R * c;
     }
-
+    public static String show()
+    {
+        return "Nazwa metody: asyncPrimes, parametry: (int floor, int celling), opis: zwraca ilość liczb pierwszych w podanym przedziale [min, max] oraz największą liczbę pierwszą mniejszą/równą max\nNazwa metody: distance, parametry (double lat1, double lon1, double lat2, double lon2), opis: zwraca odległość między dwoma punktami na powierzchni Ziemi";
+    }
 
 
     public static void main(String[] args) {
-        try{
-            System.err.println("Startuje serwer XML-RPC...");
-            int port = 4000;
-            WebServer server = new WebServer(port);
-            server.addHandler("MojSerwer", new Main());
-            server.start();
-            System.out.println("Serwer wystartował pomślnie");
-            System.out.println("Nasłuchuje na porcie: " + port);
-            System.out.println("Aby zatrzymać naciśnij ctrl+c");
-        }
+//        try{
+//            System.err.println("Startuje serwer XML-RPC...");
+//            int port = 4000;
+//            WebServer server = new WebServer(port);
+//            server.addHandler("MojSerwer", new Main());
+//            server.start();
+//            System.out.println("Serwer wystartował pomślnie");
+//            System.out.println("Nasłuchuje na porcie: " + port);
+//            System.out.println("Aby zatrzymać naciśnij ctrl+c");
+//        }
+//
+//        catch (Exception exception){
+//            System.err.println("Serwer XML-RPC: "+ exception);
+//        }
 
-        catch (Exception exception){
-            System.err.println("Serwer XML-RPC: "+ exception);
-        }
-
-
-
+        System.out.println(show());
     }
 }
