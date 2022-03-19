@@ -2,6 +2,7 @@ import org.apache.xmlrpc.WebServer;
 
 import java.util.ArrayList;
 import java.util.Vector;
+import java.lang.reflect.Method;
 
 public class Main {
     //kom
@@ -55,6 +56,11 @@ public class Main {
 
     public String generateMessage(int number, String text){
         return text + number;
+    }
+    
+    public static String show()
+    {
+        return "Nazwa metody: asyncPrimes, parametry: (int floor, int celling), opis: zwraca ilość liczb pierwszych w podanym przedziale [min, max] oraz największą liczbę pierwszą mniejszą/równą max\nNazwa metody: distance, parametry (double lat1, double lon1, double lat2, double lon2), opis: zwraca odległość między dwoma punktami na powierzchni Ziemi";
     }
 
 
