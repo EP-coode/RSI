@@ -41,7 +41,7 @@ public class Main {
         return anwser;
     }
 
-    private Double distance(double lat1, double lon1, double lat2, double lon2){
+    public Double distance(double lat1, double lon1, double lat2, double lon2){
         final double R = 6371d; // radious of earth
         double latDistanceRads = (lat2 - lat1) * Math.PI / 180;
         double lonDistanceRads = (lon2 - lon1) * Math.PI / 180;
@@ -53,6 +53,9 @@ public class Main {
         return R * c;
     }
 
+    public String generateMessage(int number, String text){
+        return text + number;
+    }
 
 
     public static void main(String[] args) {
@@ -70,8 +73,5 @@ public class Main {
         catch (Exception exception){
             System.err.println("Serwer XML-RPC: "+ exception);
         }
-
-
-
     }
 }
