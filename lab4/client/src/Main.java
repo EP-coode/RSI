@@ -9,7 +9,7 @@ public class Main {
 
             Vector<Integer> params = new Vector<>();
             params.addElement(100000000);
-            params.addElement(11000000);
+            params.addElement(110000000);
             Object result = srv.execute("MojSerwer.asyncPrimes", params);
 
             Vector<Double> params2 = new Vector<>();
