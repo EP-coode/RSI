@@ -58,9 +58,15 @@ public class Main {
         return text + number;
     }
     
-    public static String show()
-    {
-        return "Nazwa metody: asyncPrimes, parametry: (int floor, int celling), opis: zwraca ilość liczb pierwszych w podanym przedziale [min, max] oraz największą liczbę pierwszą mniejszą/równą max\nNazwa metody: distance, parametry (double lat1, double lon1, double lat2, double lon2), opis: zwraca odległość między dwoma punktami na powierzchni Ziemi";
+    public String show(){
+//        Vector<String> v = new Vector<>();
+//        v.addElement("Nazwa metody: asyncPrimes, parametry: (int floor, int celling), opis: zwraca ilość liczb pierwszych w podanym przedziale [min, max] oraz największą liczbę pierwszą mniejszą lub równą max");
+//        v.addElement("Nazwa metody: distance, parametry (double lat1, double lon1, double lat2, double lon2), opis: zwraca odległość między dwoma punktami na powierzchni Ziemi");
+//        v.addElement("Nazwa metody generateMessage, parametry (int number, String text), opis: zwraca połączone parametry");
+        return "Nazwa metody: asyncPrimes, parametry: (int floor, int celling), opis: zwraca ilosc liczb pierwszych w podanym przedziale [min, max] oraz najwieksza liczbe pierwsza mniejsza lub rowna max\n" +
+                "Nazwa metody: distance, parametry (double lat1, double lon1, double lat2, double lon2), opis: zwraca odleglosc miedzy dwoma punktami na powierzchni Ziemi\n"+
+                "Nazwa metody: generateMessage, parametry (int number, String text), opis: zwraca polaczone parametry";
+        //return "Nazwa metody: distance, parametry (double lat1, double lon1, double lat2, double lon2), opis: zwraca odległość między dwoma punktami na powierzchni Ziemi";
     }
 
 
