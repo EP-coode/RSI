@@ -7,7 +7,7 @@ import java.util.Vector;
 public class Main {
     public static void main(String[] args) {
         try{
-            XmlRpcClient srv = new XmlRpcClient("http://192.168.3.111:4000");
+            XmlRpcClient srv = new XmlRpcClient("http://localhost:4000");
             Scanner sc = new Scanner(System.in);
             sc.useLocale(Locale.US);
             while(true)
@@ -54,7 +54,7 @@ public class Main {
                         System.out.print("Podaj wspołrzędną y drugiego punktu: ");
                         params2.addElement(sc.nextDouble());
                         Object result2 = srv.execute("MojSerwer.distance", params2);
-                        System.out.println("Odległość to: "+result2.toString());
+                        System.out.println("Odległość to: "+result2.toString() + " KM");
                         break;
                     }
                     case 4:
@@ -64,8 +64,9 @@ public class Main {
                         params3.addElement(sc.nextInt());
                         System.out.print("Podaj jedno słowo: ");
                         params3.addElement(sc.next());
-                        Object result3 = srv.execute("MojSerwer.generateMessage", params3);
-                        System.out.println(result3.toString());
+                        AC ac = new AC();
+                        System.out.println("Poczekaj, wykonuje zapytanie asynchroniczne...");
+                        srv.executeAsync("MojSerwer.generateMessage", params3, ac);
                         break;
                     }
                     default:
