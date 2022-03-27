@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SerwerRMI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SerwerRMI_jar</output-path>
+    <root id="archive" name="SerwerRMI.jar">
+      <element id="module-output" name="SerwerRMI" />
+    </root>
+  </artifact>
+</component>
