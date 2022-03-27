@@ -1,16 +1,20 @@
 package ClientRMI;
 
+import MyData.MyData;
 import SerwerRMI.CalcObject;
 import SerwerRMI.CalcObject2;
 import SerwerRMI.InputType;
 import SerwerRMI.ResultType;
 
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 public class MyClient {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException, java.rmi.UnknownHostException {
+        MyData.info("Ernest Przybył 256480");
+
         double wynik;
         ResultType result;
         InputType inObj;

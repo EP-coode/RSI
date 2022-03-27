@@ -1,10 +1,15 @@
 package SerwerRMI;
 
+import MyData.MyData;
+
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 
 public class MyServer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException, java.rmi.UnknownHostException {
+        MyData.info("Ernest Przybył 256480");
+
         if(args.length == 0){
             System.out.println("You have to enter RMI object address in the form: //host_address/service_name");
             return;

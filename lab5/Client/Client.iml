@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="src" level="project" />
     <orderEntry type="module" module-name="SerwerRMI" />
+    <orderEntry type="library" name="MyData" level="project" />
   </component>
 </module>
