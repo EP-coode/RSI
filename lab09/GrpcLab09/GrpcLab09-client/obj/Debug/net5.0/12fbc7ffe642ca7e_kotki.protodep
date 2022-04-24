@@ -1,0 +1,2 @@
+obj\Debug\net5.0\Protos/Kotki.cs \
+obj\Debug\net5.0\Protos/KotkiGrpc.cs: Protos/kotki.proto

@@ -45,6 +45,7 @@ namespace GrpcLab09 {
     static readonly grpc::Marshaller<global::GrpcLab09.Kotek> __Marshaller_greet_Kotek = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcLab09.Kotek.Parser));
     static readonly grpc::Marshaller<global::GrpcLab09.OperationStatusResponse> __Marshaller_greet_OperationStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcLab09.OperationStatusResponse.Parser));
     static readonly grpc::Marshaller<global::GrpcLab09.ParametryWyszukiwaniaKotkow> __Marshaller_greet_ParametryWyszukiwaniaKotkow = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcLab09.ParametryWyszukiwaniaKotkow.Parser));
+    static readonly grpc::Marshaller<global::GrpcLab09.ListaKotow> __Marshaller_greet_ListaKotow = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcLab09.ListaKotow.Parser));
     static readonly grpc::Marshaller<global::GrpcLab09.EmptyResponse> __Marshaller_greet_EmptyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcLab09.EmptyResponse.Parser));
 
     static readonly grpc::Method<global::GrpcLab09.Kotek, global::GrpcLab09.OperationStatusResponse> __Method_DodajKotka = new grpc::Method<global::GrpcLab09.Kotek, global::GrpcLab09.OperationStatusResponse>(
@@ -54,12 +55,12 @@ namespace GrpcLab09 {
         __Marshaller_greet_Kotek,
         __Marshaller_greet_OperationStatusResponse);
 
-    static readonly grpc::Method<global::GrpcLab09.ParametryWyszukiwaniaKotkow, global::GrpcLab09.OperationStatusResponse> __Method_PodajKotki = new grpc::Method<global::GrpcLab09.ParametryWyszukiwaniaKotkow, global::GrpcLab09.OperationStatusResponse>(
+    static readonly grpc::Method<global::GrpcLab09.ParametryWyszukiwaniaKotkow, global::GrpcLab09.ListaKotow> __Method_PodajKotki = new grpc::Method<global::GrpcLab09.ParametryWyszukiwaniaKotkow, global::GrpcLab09.ListaKotow>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PodajKotki",
         __Marshaller_greet_ParametryWyszukiwaniaKotkow,
-        __Marshaller_greet_OperationStatusResponse);
+        __Marshaller_greet_ListaKotow);
 
     static readonly grpc::Method<global::GrpcLab09.Kotek, global::GrpcLab09.EmptyResponse> __Method_UsunKotka = new grpc::Method<global::GrpcLab09.Kotek, global::GrpcLab09.EmptyResponse>(
         grpc::MethodType.Unary,
@@ -90,7 +91,7 @@ namespace GrpcLab09 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::GrpcLab09.OperationStatusResponse> PodajKotki(global::GrpcLab09.ParametryWyszukiwaniaKotkow request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcLab09.ListaKotow> PodajKotki(global::GrpcLab09.ParametryWyszukiwaniaKotkow request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -125,7 +126,7 @@ namespace GrpcLab09 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, KociarniaBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DodajKotka, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcLab09.Kotek, global::GrpcLab09.OperationStatusResponse>(serviceImpl.DodajKotka));
-      serviceBinder.AddMethod(__Method_PodajKotki, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcLab09.ParametryWyszukiwaniaKotkow, global::GrpcLab09.OperationStatusResponse>(serviceImpl.PodajKotki));
+      serviceBinder.AddMethod(__Method_PodajKotki, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcLab09.ParametryWyszukiwaniaKotkow, global::GrpcLab09.ListaKotow>(serviceImpl.PodajKotki));
       serviceBinder.AddMethod(__Method_UsunKotka, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcLab09.Kotek, global::GrpcLab09.EmptyResponse>(serviceImpl.UsunKotka));
       serviceBinder.AddMethod(__Method_EdytujKotka, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcLab09.Kotek, global::GrpcLab09.OperationStatusResponse>(serviceImpl.EdytujKotka));
     }

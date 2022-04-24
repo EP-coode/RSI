@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace GrpcLab09 {
+namespace GrpcLab09_client {
 
   /// <summary>Holder for reflection information generated from Protos/kotki.proto</summary>
   public static partial class KotkiReflection {
@@ -34,16 +34,16 @@ namespace GrpcLab09 {
             "cmVldC5QYXJhbWV0cnlXeXN6dWtpd2FuaWFLb3Rrb3caES5ncmVldC5MaXN0",
             "YUtvdG93Ei8KCVVzdW5Lb3RrYRIMLmdyZWV0LktvdGVrGhQuZ3JlZXQuRW1w",
             "dHlSZXNwb25zZRI7CgtFZHl0dWpLb3RrYRIMLmdyZWV0LktvdGVrGh4uZ3Jl",
-            "ZXQuT3BlcmF0aW9uU3RhdHVzUmVzcG9uc2VCDKoCCUdycGNMYWIwOWIGcHJv",
-            "dG8z"));
+            "ZXQuT3BlcmF0aW9uU3RhdHVzUmVzcG9uc2VCE6oCEEdycGNMYWIwOV9jbGll",
+            "bnRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09.ParametryWyszukiwaniaKotkow), global::GrpcLab09.ParametryWyszukiwaniaKotkow.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09.EmptyResponse), global::GrpcLab09.EmptyResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09.Kotek), global::GrpcLab09.Kotek.Parser, new[]{ "Id", "Nazwa", "Waga" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09.OperationStatusResponse), global::GrpcLab09.OperationStatusResponse.Parser, new[]{ "Error", "Msg" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09.ListaKotow), global::GrpcLab09.ListaKotow.Parser, new[]{ "Kotki" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09_client.ParametryWyszukiwaniaKotkow), global::GrpcLab09_client.ParametryWyszukiwaniaKotkow.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09_client.EmptyResponse), global::GrpcLab09_client.EmptyResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09_client.Kotek), global::GrpcLab09_client.Kotek.Parser, new[]{ "Id", "Nazwa", "Waga" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09_client.OperationStatusResponse), global::GrpcLab09_client.OperationStatusResponse.Parser, new[]{ "Error", "Msg" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcLab09_client.ListaKotow), global::GrpcLab09_client.ListaKotow.Parser, new[]{ "Kotki" }, null, null, null, null)
           }));
     }
     #endregion
@@ -62,7 +62,7 @@ namespace GrpcLab09 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcLab09.KotkiReflection.Descriptor.MessageTypes[0]; }
+      get { return global::GrpcLab09_client.KotkiReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -198,7 +198,7 @@ namespace GrpcLab09 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcLab09.KotkiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcLab09_client.KotkiReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -334,7 +334,7 @@ namespace GrpcLab09 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcLab09.KotkiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::GrpcLab09_client.KotkiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -578,7 +578,7 @@ namespace GrpcLab09 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcLab09.KotkiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::GrpcLab09_client.KotkiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -786,7 +786,7 @@ namespace GrpcLab09 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcLab09.KotkiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::GrpcLab09_client.KotkiReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -814,11 +814,11 @@ namespace GrpcLab09 {
 
     /// <summary>Field number for the "kotki" field.</summary>
     public const int KotkiFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::GrpcLab09.Kotek> _repeated_kotki_codec
-        = pb::FieldCodec.ForMessage(10, global::GrpcLab09.Kotek.Parser);
-    private readonly pbc::RepeatedField<global::GrpcLab09.Kotek> kotki_ = new pbc::RepeatedField<global::GrpcLab09.Kotek>();
+    private static readonly pb::FieldCodec<global::GrpcLab09_client.Kotek> _repeated_kotki_codec
+        = pb::FieldCodec.ForMessage(10, global::GrpcLab09_client.Kotek.Parser);
+    private readonly pbc::RepeatedField<global::GrpcLab09_client.Kotek> kotki_ = new pbc::RepeatedField<global::GrpcLab09_client.Kotek>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::GrpcLab09.Kotek> Kotki {
+    public pbc::RepeatedField<global::GrpcLab09_client.Kotek> Kotki {
       get { return kotki_; }
     }
 

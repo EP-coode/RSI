@@ -17,27 +17,29 @@ namespace GrpcLab09
             _kotkiService = kotkiService;
         }
 
-        public OperationStatusResponse DodajKotka(Kotek k)
+        public override Task<OperationStatusResponse> DodajKotka(Kotek request, ServerCallContext context)
         {
-            return _kotkiService.DodajKotka(k);
+            return Task.FromResult(_kotkiService.DodajKotka(request));
         }
 
-        public ListaKotow PodajKotki()
+
+
+        public override Task<ListaKotow> PodajKotki(ParametryWyszukiwaniaKotkow request, ServerCallContext context)
         {
             ListaKotow lk = new ListaKotow();
             lk.Kotki.AddRange(_kotkiService.PodajKotki());
-            return lk;
+            return Task.FromResult(lk);
         }
 
-        public EmptyResponse UsunKotka(Kotek k)
+        public override Task<EmptyResponse> UsunKotka(Kotek k, ServerCallContext context)
         {
             _kotkiService.UsunKotka(k);
-            return new EmptyResponse();
+            return Task.FromResult(new EmptyResponse());
         }
 
-        public OperationStatusResponse EdytujKotka(Kotek k)
+        public override Task<OperationStatusResponse> EdytujKotka(Kotek k, ServerCallContext context)
         {
-            return _kotkiService.EdytujKotka(k);
+            return Task.FromResult(_kotkiService.EdytujKotka(k));
         }
     }
 }
