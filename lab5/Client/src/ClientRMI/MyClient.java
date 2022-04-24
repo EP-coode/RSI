@@ -22,15 +22,15 @@ public class MyClient {
         CalcObject2 zObject2;
 
         if (args.length == 0) {
-            System.out.println("You have to enter RMI object address in the form: //host_address/service_name");
+            System.out.println("You have to enter RMI object address in the form: //host_address");
             return;
         }
 
         String addres = args[0];
 
         try {
-            //zObject = (CalcObject) java.rmi.Naming.lookup(addres);
-            zObject2 = (CalcObject2) java.rmi.Naming.lookup(addres);
+            zObject = (CalcObject) java.rmi.Naming.lookup(addres + "/calc1");
+            zObject2 = (CalcObject2) java.rmi.Naming.lookup(addres + "/calc2");
         } catch (RemoteException | NotBoundException | MalformedURLException e) {
             System.out.println("Nie mozna porobrac referencji do " + addres);
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class MyClient {
         System.out.println("Referencja do " + addres + " jest pobrana.");
 
         try {
-            // = zObject.calculate(1.1, 2.2);
+            wynik = zObject.calculate(1.1, 2.2);
             inObj = new InputType();
             inObj.x1 = 1;
             inObj.x2 = -3.14d;
@@ -55,4 +55,4 @@ public class MyClient {
 
         System.out.println("Wynik = " + result.result);
     }
-    }
+}

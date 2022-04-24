@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcLab09";
+
+package greet;
+
+service Kociarnia {
+  rpc DodajKotka (Kotek) returns (OperationStatusResponse);
+  rpc PodajKotki (ParametryWyszukiwaniaKotkow) returns (OperationStatusResponse);
+  rpc UsunKotka (Kotek) returns (EmptyResponse);
+  rpc EdytujKotka (Kotek) returns (OperationStatusResponse);
+}
+
+message ParametryWyszukiwaniaKotkow{
+
+}
+
+message EmptyResponse{
+
+}
+
+message Kotek{
+	int64 id = 1;
+	string nazwa = 2;
+	double waga = 3;
+}
+
+message OperationStatusResponse {
+	bool error = 1;
+	string msg = 2;
+}
+
+message ListaKotow{
+	repeated Kotek kotki = 1;
+}
