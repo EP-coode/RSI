@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="c18ca409-7d01-4d4c-8496-5c9ebec89650" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:10000/KotkiService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KotkiService.xsd" MetadataType="Schema" ID="3ab693ea-fc7c-4a45-9874-29e7a82f2fb8" SourceId="1" SourceUrl="http://localhost:10000/KotkiService?xsd=xsd0" />
+    <MetadataFile FileName="KotkiService1.xsd" MetadataType="Schema" ID="629439a4-985a-4172-9f37-a758b15a9da3" SourceId="1" SourceUrl="http://localhost:10000/KotkiService?xsd=xsd2" />
+    <MetadataFile FileName="KotkiService.wsdl" MetadataType="Wsdl" ID="139f5aa5-9f05-4e49-a47e-050b4e847ca9" SourceId="1" SourceUrl="http://localhost:10000/KotkiService?wsdl" />
+    <MetadataFile FileName="KotkiService.disco" MetadataType="Disco" ID="9513df79-9ed8-46df-af97-1d953671ced2" SourceId="1" SourceUrl="http://localhost:10000/KotkiService?disco" />
+    <MetadataFile FileName="KotkiService2.xsd" MetadataType="Schema" ID="e1cd6073-5435-469a-9974-624f34f2e9d3" SourceId="1" SourceUrl="http://localhost:10000/KotkiService?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
