@@ -13,6 +13,9 @@ namespace WcfServiceContract1
     {
         [OperationContract]
         ComplexNum addCNum(ComplexNum n1, ComplexNum n2);
+
+        [OperationContract]
+        ComplexNum multiplyCnum(ComplexNum n1, ComplexNum n2);
     }
 
 }

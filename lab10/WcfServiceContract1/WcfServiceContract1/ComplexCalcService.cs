@@ -15,5 +15,12 @@ namespace WcfServiceContract1
             Console.WriteLine("...called addCNum(...)");
             return new ComplexNum(n1.real + n2.real, n1.imag + n2.imag);
         }
+
+        public ComplexNum multiplyCnum(ComplexNum n1, ComplexNum n2)
+        {
+            double real = n1.real * n2.real - n1.imag * n2.imag;
+            double imag = n1.imag * n2.real + n1.real * n2.imag;
+            return new ComplexNum(real, imag);
+        }
     }
 }

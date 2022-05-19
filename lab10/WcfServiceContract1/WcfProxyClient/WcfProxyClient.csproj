@@ -50,7 +50,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ComplexCalcServiceRef\Reference.cs">
+    <Compile Include="Connected Services\CCalcRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,17 +73,17 @@
     <None Include="Connected Services\AsyncServiceRef\AsyncService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ComplexCalcServiceRef\ComplexCalc.xsd">
+    <None Include="Connected Services\CCalcRef\ComplexCalc.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ComplexCalcServiceRef\ComplexCalc1.xsd">
+    <None Include="Connected Services\CCalcRef\ComplexCalc1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ComplexCalcServiceRef\ComplexCalc2.xsd">
+    <None Include="Connected Services\CCalcRef\ComplexCalc2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ComplexCalcServiceRef\ComplexCalcService.wsdl" />
-    <None Include="Connected Services\ComplexCalcServiceRef\WcfProxyClient.ComplexCalcServiceRef.ComplexNum.datasource">
+    <None Include="Connected Services\CCalcRef\ComplexCalcService.wsdl" />
+    <None Include="Connected Services\CCalcRef\WcfProxyClient.CCalcRef.ComplexNum.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SuperCalcRef\MySuperCalc.wsdl" />
@@ -99,23 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AsyncServiceRef\" />
-    <WCFMetadataStorage Include="Connected Services\ComplexCalcServiceRef\" />
+    <WCFMetadataStorage Include="Connected Services\CCalcRef\" />
     <WCFMetadataStorage Include="Connected Services\SuperCalcRef\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComplexCalcServiceRef\ComplexCalc.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComplexCalcServiceRef\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComplexCalcServiceRef\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComplexCalcServiceRef\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\AsyncServiceRef\AsyncService.disco" />
@@ -143,6 +128,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\SuperCalcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CCalcRef\ComplexCalc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CCalcRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CCalcRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CCalcRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
