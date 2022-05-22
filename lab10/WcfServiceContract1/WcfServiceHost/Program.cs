@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using WcfServiceContract1;
@@ -7,9 +8,22 @@ namespace WcfHost
 {
     internal class Program
     {
+        class MyData
+        {
+            public static void info()
+            {
+                Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                Console.WriteLine("Ernest Przybył 256480");
+                Console.WriteLine(Environment.UserName);
+                Console.WriteLine(System.Environment.OSVersion.VersionString);
+                Console.WriteLine(Environment.Version);
+                Console.WriteLine(Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString());
+            }
+        }
 
         static void Main(string[] args)
         {
+            MyData.info();
             WSHttpBinding binding = new WSHttpBinding();
             WSDualHttpBinding binding2 = new WSDualHttpBinding();
             ServiceMetadataBehavior smb = new ServiceMetadataBehavior();

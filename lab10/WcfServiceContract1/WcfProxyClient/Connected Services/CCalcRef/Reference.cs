@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfProxyClient.ComplexCalcServiceRef {
+namespace WcfProxyClient.CCalcRef {
     using System.Runtime.Serialization;
     using System;
     
@@ -91,23 +91,29 @@ namespace WcfProxyClient.ComplexCalcServiceRef {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ComplexCalcServiceRef.IComplexCalc")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CCalcRef.IComplexCalc")]
     public interface IComplexCalc {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComplexCalc/addCNum", ReplyAction="http://tempuri.org/IComplexCalc/addCNumResponse")]
-        WcfProxyClient.ComplexCalcServiceRef.ComplexNum addCNum(WcfProxyClient.ComplexCalcServiceRef.ComplexNum n1, WcfProxyClient.ComplexCalcServiceRef.ComplexNum n2);
+        WcfProxyClient.CCalcRef.ComplexNum addCNum(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComplexCalc/addCNum", ReplyAction="http://tempuri.org/IComplexCalc/addCNumResponse")]
-        System.Threading.Tasks.Task<WcfProxyClient.ComplexCalcServiceRef.ComplexNum> addCNumAsync(WcfProxyClient.ComplexCalcServiceRef.ComplexNum n1, WcfProxyClient.ComplexCalcServiceRef.ComplexNum n2);
+        System.Threading.Tasks.Task<WcfProxyClient.CCalcRef.ComplexNum> addCNumAsync(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComplexCalc/multiplyCnum", ReplyAction="http://tempuri.org/IComplexCalc/multiplyCnumResponse")]
+        WcfProxyClient.CCalcRef.ComplexNum multiplyCnum(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComplexCalc/multiplyCnum", ReplyAction="http://tempuri.org/IComplexCalc/multiplyCnumResponse")]
+        System.Threading.Tasks.Task<WcfProxyClient.CCalcRef.ComplexNum> multiplyCnumAsync(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IComplexCalcChannel : WcfProxyClient.ComplexCalcServiceRef.IComplexCalc, System.ServiceModel.IClientChannel {
+    public interface IComplexCalcChannel : WcfProxyClient.CCalcRef.IComplexCalc, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ComplexCalcClient : System.ServiceModel.ClientBase<WcfProxyClient.ComplexCalcServiceRef.IComplexCalc>, WcfProxyClient.ComplexCalcServiceRef.IComplexCalc {
+    public partial class ComplexCalcClient : System.ServiceModel.ClientBase<WcfProxyClient.CCalcRef.IComplexCalc>, WcfProxyClient.CCalcRef.IComplexCalc {
         
         public ComplexCalcClient() {
         }
@@ -128,12 +134,20 @@ namespace WcfProxyClient.ComplexCalcServiceRef {
                 base(binding, remoteAddress) {
         }
         
-        public WcfProxyClient.ComplexCalcServiceRef.ComplexNum addCNum(WcfProxyClient.ComplexCalcServiceRef.ComplexNum n1, WcfProxyClient.ComplexCalcServiceRef.ComplexNum n2) {
+        public WcfProxyClient.CCalcRef.ComplexNum addCNum(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2) {
             return base.Channel.addCNum(n1, n2);
         }
         
-        public System.Threading.Tasks.Task<WcfProxyClient.ComplexCalcServiceRef.ComplexNum> addCNumAsync(WcfProxyClient.ComplexCalcServiceRef.ComplexNum n1, WcfProxyClient.ComplexCalcServiceRef.ComplexNum n2) {
+        public System.Threading.Tasks.Task<WcfProxyClient.CCalcRef.ComplexNum> addCNumAsync(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2) {
             return base.Channel.addCNumAsync(n1, n2);
+        }
+        
+        public WcfProxyClient.CCalcRef.ComplexNum multiplyCnum(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2) {
+            return base.Channel.multiplyCnum(n1, n2);
+        }
+        
+        public System.Threading.Tasks.Task<WcfProxyClient.CCalcRef.ComplexNum> multiplyCnumAsync(WcfProxyClient.CCalcRef.ComplexNum n1, WcfProxyClient.CCalcRef.ComplexNum n2) {
+            return base.Channel.multiplyCnumAsync(n1, n2);
         }
     }
 }
