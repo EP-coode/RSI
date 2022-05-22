@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceContract", "WcfSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KotkiServiceHost", "KotkiServiceHost\KotkiServiceHost.csproj", "{89667EA8-30A0-4D60-93BC-3C8D1FB7B753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientWcf", "KlientWcf\KlientWcf.csproj", "{EE853F6A-E2A3-49F4-8C73-EE24781F9478}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{89667EA8-30A0-4D60-93BC-3C8D1FB7B753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89667EA8-30A0-4D60-93BC-3C8D1FB7B753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89667EA8-30A0-4D60-93BC-3C8D1FB7B753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE853F6A-E2A3-49F4-8C73-EE24781F9478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE853F6A-E2A3-49F4-8C73-EE24781F9478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE853F6A-E2A3-49F4-8C73-EE24781F9478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE853F6A-E2A3-49F4-8C73-EE24781F9478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

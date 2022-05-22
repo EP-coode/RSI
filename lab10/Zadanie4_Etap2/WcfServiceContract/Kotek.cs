@@ -35,5 +35,11 @@ namespace WcfServiceContract
             this.name = name;
             this.plec = plec;
         }
+
+        public override string ToString()
+        {
+            string prefix = plec == Plec.SAMICA ? "kotka:" : "kocur:";
+            return $"{prefix} {name} - {id}";
+        }
     }
 }
