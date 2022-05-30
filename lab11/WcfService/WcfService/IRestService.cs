@@ -57,6 +57,22 @@ namespace WcfService
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json)]
         Car deleteJson(string id);
+
+
+        [OperationContract]
+        [WebInvoke(
+             UriTemplate = "/json/Car",
+            Method = "PATCH",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json)]
+        Car updateJson(Car car);
+
+
+        [OperationContract]
+        [WebInvoke(
+             UriTemplate = "/info",
+            Method = "GET")]
+        string getInfo();
     }
 
     [DataContract]

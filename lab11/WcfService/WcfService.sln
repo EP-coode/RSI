@@ -5,6 +5,13 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{C4DE7F38-0B52-4730-A6CE-FA6A012267B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klient", "Klient\Klient.csproj", "{57CE5369-175F-4D84-ACAE-C8890233794A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4DE7F38-0B52-4730-A6CE-FA6A012267B1} = {C4DE7F38-0B52-4730-A6CE-FA6A012267B1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klient2", "Klient2\Klient2.csproj", "{4755E13A-A494-4B57-9CAF-2445F5257E87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,14 @@ Global
 		{C4DE7F38-0B52-4730-A6CE-FA6A012267B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4DE7F38-0B52-4730-A6CE-FA6A012267B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4DE7F38-0B52-4730-A6CE-FA6A012267B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CE5369-175F-4D84-ACAE-C8890233794A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CE5369-175F-4D84-ACAE-C8890233794A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CE5369-175F-4D84-ACAE-C8890233794A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CE5369-175F-4D84-ACAE-C8890233794A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4755E13A-A494-4B57-9CAF-2445F5257E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4755E13A-A494-4B57-9CAF-2445F5257E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4755E13A-A494-4B57-9CAF-2445F5257E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4755E13A-A494-4B57-9CAF-2445F5257E87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

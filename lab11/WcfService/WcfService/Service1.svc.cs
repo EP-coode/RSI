@@ -12,6 +12,22 @@ namespace WcfService
     // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę klasy „RestService” w kodzie, usłudze i pliku konfiguracji.
     // UWAGA: aby uruchomić klienta testowego WCF w celu przetestowania tej usługi, wybierz plik RestService.svc lub RestService.svc.cs w eksploratorze rozwiązań i rozpocznij debugowanie.
 
+    static class MyData
+    {
+        public static string info()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            sb.AppendLine("Ernest Przybył 256480");
+            sb.AppendLine(Environment.UserName);
+            sb.AppendLine(System.Environment.OSVersion.VersionString);
+            sb.AppendLine(Environment.Version.ToString());
+            sb.AppendLine(Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString());
+
+            return sb.ToString();
+        }
+    }
+
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class RestService : IRestService
     {
@@ -98,6 +114,23 @@ namespace WcfService
                 throw new WebFaultException<string>("404: Not Found", HttpStatusCode.NotFound);
 
             return founcCar;
+        }
+
+        public string getInfo()
+        {
+            return MyData.info();
+        }
+
+        public Car updateJson(Car car)
+        {
+            int carId = car.Id;
+            var founcCarIndex = cars.FindIndex(c => c.Id == carId);
+
+            if (founcCarIndex == -1)
+                throw new WebFaultException<string>("404: Not Found", HttpStatusCode.NotFound);
+
+            cars[founcCarIndex] = car;
+            return car;
         }
     }
 
