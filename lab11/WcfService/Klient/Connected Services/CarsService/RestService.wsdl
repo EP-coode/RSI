@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="RestService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61497/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61497/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61497/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRestService_getAllXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllXml" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getAllXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getByIdXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:getByIdXml" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getByIdXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getByIdXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_addXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:addXml" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_addXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_deleteXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteXml" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_deleteXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getAllJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllJson" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getAllJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getByIdJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:getByIdJson" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_getByIdJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getByIdJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_addJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:addJson" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_addJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_deleteJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteJson" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_deleteJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteJsonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRestService">
+    <wsdl:operation name="getAllXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/getAllXml" message="tns:IRestService_getAllXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/getAllXmlResponse" message="tns:IRestService_getAllXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getByIdXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/getByIdXml" message="tns:IRestService_getByIdXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/getByIdXmlResponse" message="tns:IRestService_getByIdXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/addXml" message="tns:IRestService_addXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/addXmlResponse" message="tns:IRestService_addXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/deleteXml" message="tns:IRestService_deleteXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/deleteXmlResponse" message="tns:IRestService_deleteXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/getAllJson" message="tns:IRestService_getAllJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/getAllJsonResponse" message="tns:IRestService_getAllJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getByIdJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/getByIdJson" message="tns:IRestService_getByIdJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/getByIdJsonResponse" message="tns:IRestService_getByIdJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/addJson" message="tns:IRestService_addJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/addJsonResponse" message="tns:IRestService_addJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestService/deleteJson" message="tns:IRestService_deleteJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestService/deleteJsonResponse" message="tns:IRestService_deleteJson_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="RestService" />
+</wsdl:definitions>

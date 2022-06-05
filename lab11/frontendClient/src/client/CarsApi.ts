@@ -36,4 +36,11 @@ export class CarsApi {
     const data = await result.json();
     return data;
   }
+
+  // TODO
+  static async getMyDataInfo(): Promise<string> {
+    const result = await fetch(`${BASE_URL}/info`);
+    const data = await result.json();
+    return data;
+  }
 }
